@@ -2,15 +2,21 @@
   "RSpec": {
     "coverage": {
       "/Users/admin/technical_challenge/bank_tech_test/lib/account.rb": [
-
+        1,
+        1,
+        null,
+        1,
+        null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/deposit.rb": [
-
+        1,
+        null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/withdrawal.rb": [
-
+        1,
+        null
       ]
     },
-    "timestamp": 1549886580
+    "timestamp": 1549887421
   }
 }
