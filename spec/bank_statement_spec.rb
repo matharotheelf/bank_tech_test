@@ -32,7 +32,20 @@ describe Bank_statement do
         [{ 'date' => '2013-04-12',
            'credit' => nil,
            'debit' => 200,
-           'balance' => 200 }]
+           'balance' => -200 }]
+      )
+    end
+
+    it 'can convert the data of a different deposit object' do
+      allow(account).to receive(:transaction_array) { [deposit] }
+      allow(deposit).to receive(:is_a?).with(Deposit) { true }
+      allow(deposit).to receive(:amount) { 8 }
+      allow(deposit).to receive(:date) { '2013-08-12' }
+      expect(@bank.create_history(account)).to eq(
+        [{ 'date' => '2013-08-12',
+           'credit' => 8,
+           'debit' => nil,
+           'balance' => 8 }]
       )
     end
   end
