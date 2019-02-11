@@ -4,9 +4,16 @@ describe Deposit do
   describe '#amount' do
     let(:amount) { double :amount }
 
-    it 'Can save an amount to it' do
-      deposit = Deposit.new(amount)
-      expect(deposit.amount).to eq(amount)
+    before do
+      @deposit = Deposit.new(amount)
+    end
+
+    it 'can save an amount to it' do
+      expect(@deposit.amount).to eq(amount)
+    end
+
+    it 'can save date to it' do
+      expect(@deposit.date).to eq(Date.today)
     end
   end
 end
