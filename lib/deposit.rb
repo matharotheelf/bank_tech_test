@@ -1,5 +1,3 @@
-require 'date'
-
 class Deposit
   attr_reader :amount, :date
   def initialize(amount)
