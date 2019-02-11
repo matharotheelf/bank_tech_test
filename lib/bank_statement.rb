@@ -10,14 +10,9 @@ class Bank_statement
       final_array[0]['balance'] = transaction_array[0].amount
       final_array[0]['debit'] = nil
     else
-      final_array = [{ 'date' => '2013-04-12',
-                       'credit' => nil,
-                       'debit' => 200,
-                       'balance' => -200 }]
-
-      # final_array[0]['debit'] = transaction_array[0].amount
-      # final_array[0]['balance'] = -transaction_array[0].amount
-      # final_array[0]['credit'] = nil
+      final_array[0]['debit'] = transaction_array[0].amount
+      final_array[0]['balance'] = -transaction_array[0].amount
+      final_array[0]['credit'] = nil
     end
     final_array
   end

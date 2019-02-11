@@ -48,5 +48,18 @@ describe Bank_statement do
            'balance' => 8 }]
       )
     end
+
+    it 'can convert the data of a different withdrawal object' do
+      allow(account).to receive(:transaction_array) { [withdrawal] }
+      allow(withdrawal).to receive(:is_a?).with(Deposit) { false }
+      allow(withdrawal).to receive(:amount) { 13 }
+      allow(withdrawal).to receive(:date) { '2013-13-12' }
+      expect(@bank.create_history(account)).to eq(
+        [{ 'date' => '2013-13-12',
+           'credit' => nil,
+           'debit' => 13,
+           'balance' => -13 }]
+      )
+    end
   end
 end
