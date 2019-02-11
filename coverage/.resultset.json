@@ -6,6 +6,15 @@
         1,
         null,
         1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/deposit.rb": [
@@ -27,6 +36,6 @@
         null
       ]
     },
-    "timestamp": 1549895537
+    "timestamp": 1549897698
   }
 }
