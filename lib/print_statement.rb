@@ -6,7 +6,7 @@ class Print_statement
     statement_array.each do |i|
       str += "#{i['date']} || #{credit(i)} || #{debit(i)} || #{i['balance']}\n"
     end
-    str
+    p str
   end
 
   private
