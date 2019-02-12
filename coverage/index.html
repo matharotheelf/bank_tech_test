@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-12T11:47:18+00:00">2019-02-12T11:47:18+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-12T12:15:56+00:00">2019-02-12T12:15:56+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.64
+         3.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>39</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#f1427a91d4c8bfd5bd7fc110f4ab7c095bae0b46" class="src_link" title="lib/bank_statement.rb">lib/bank_statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>20</td>
-        <td>20</td>
+        <td>27</td>
+        <td>21</td>
+        <td>21</td>
         <td>0</td>
-        <td>3.8</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -288,15 +288,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.64
+         3.48
        </span>
     </span> hits/line)
   </h2>
   <a name="Libraries"></a>
   <div>
     <b>4</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>39</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -326,11 +326,11 @@
       <tr>
         <td class="strong"><a href="#f1427a91d4c8bfd5bd7fc110f4ab7c095bae0b46" class="src_link" title="lib/bank_statement.rb">lib/bank_statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>20</td>
-        <td>20</td>
+        <td>27</td>
+        <td>21</td>
+        <td>21</td>
         <td>0</td>
-        <td>3.8</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -476,8 +476,8 @@
     <h3>lib/bank_statement.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -509,133 +509,139 @@
           <code class="ruby">  def create_history(account)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
           
-          <code class="ruby">    account.transaction_array</code>
+          <code class="ruby">    transactions = account.transaction_array</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">    final_array = []</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="7">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    balance = 0</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="14" data-linenumber="8">
+          <span class="hits">14</span>
           
-          <code class="ruby">    account.transaction_array.each do |element|</code>
+          <code class="ruby">    sorted = transactions.sort_by { |s| Date.strptime(s.date, &#39;%Y-%m-%d&#39;) }</code>
         </li>
       
         <li class="covered" data-hits="6" data-linenumber="9">
           <span class="hits">6</span>
           
+          <code class="ruby">    sorted.each do |element|</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="10">
+          <span class="hits">8</span>
+          
           <code class="ruby">      hash = {}</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="10">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="11">
+          <span class="hits">8</span>
           
           <code class="ruby">      hash[&#39;date&#39;] = element.date</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">      if element.is_a?(Deposit)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;credit&#39;] = element.amount</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
           
           <code class="ruby">        balance += element.amount</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="15">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;balance&#39;] = balance</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;debit&#39;] = nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;debit&#39;] = element.amount</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="19">
+          <span class="hits">4</span>
           
           <code class="ruby">        balance -= element.amount</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="19">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="20">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;balance&#39;] = balance</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="21">
+          <span class="hits">4</span>
           
           <code class="ruby">        hash[&#39;credit&#39;] = nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="22">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="23">
+          <span class="hits">8</span>
           
           <code class="ruby">      final_array.unshift(hash)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="24">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="25">
+          <span class="hits">6</span>
           
           <code class="ruby">    final_array</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>

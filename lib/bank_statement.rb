@@ -2,10 +2,11 @@ require_relative 'account.rb'
 
 class Bank_statement
   def create_history(account)
-    account.transaction_array
+    transactions = account.transaction_array
     final_array = []
     balance = 0
-    account.transaction_array.each do |element|
+    sorted = transactions.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
+    sorted.each do |element|
       hash = {}
       hash['date'] = element.date
       if element.is_a?(Deposit)
