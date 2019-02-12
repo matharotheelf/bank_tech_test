@@ -1,6 +1,7 @@
 require_relative 'bank_statement.rb'
 
-class Print_statement
+# PrintStatement creates the printout of bankstatement given history hash
+class PrintStatement
   def print_statement(statement_array)
     str = "date || credit || debit || balance\n"
     statement_array.each do |i|

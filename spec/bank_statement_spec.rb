@@ -1,8 +1,8 @@
 require 'bank_statement'
 
-describe Bank_statement do
+describe BankStatement do
   before do
-    @bank = Bank_statement.new
+    @bank = BankStatement.new
   end
 
   let(:account) { double :account }

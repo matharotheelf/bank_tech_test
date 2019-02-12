@@ -1,6 +1,7 @@
 require_relative 'account.rb'
 
-class Bank_statement
+# BankStatement creates a hash for a statement from an account.
+class BankStatement
   def create_history(account)
     final_array = []
     balance = 0
@@ -23,7 +24,7 @@ def create_hash(transaction, balance)
 end
 
 def sort_by_date(array)
-  sorted = array.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
+  array.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
 end
 
 def a_deposit?(transaction)

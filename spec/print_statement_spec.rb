@@ -1,6 +1,6 @@
 require 'print_statement'
 
-describe Print_statement do
+describe PrintStatement do
   describe '#print_statement' do
     statement_array = [{ 'date' => '2013-09-12',
                          'credit' => nil,
