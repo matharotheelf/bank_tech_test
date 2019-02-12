@@ -8,11 +8,11 @@ class Account
     @transaction_array = []
   end
 
-  def create_withdrawal(amount, withdrawal = Withdrawal.new(amount))
+  def create_withdrawal(amount, date = Date.new, withdrawal = Withdrawal.new(amount, date))
     @transaction_array.push(withdrawal)
   end
 
-  def create_deposit(amount, withdrawal = Deposit.new(amount))
+  def create_deposit(amount, date = Date.new, withdrawal = Deposit.new(amount, date))
     @transaction_array.push(withdrawal)
   end
 end

@@ -8,7 +8,7 @@ describe Account do
   describe '#create_withdrawal' do
     let (:withdrawal) { double :withdrawal }
     it 'adds to transaction_array' do
-      expect { @account.create_withdrawal(nil, withdrawal) }.to(
+      expect { @account.create_withdrawal(nil, nil, withdrawal) }.to(
         change { @account.transaction_array.length }.by(1)
       )
     end
@@ -17,7 +17,7 @@ describe Account do
   describe '#create_deposit' do
     let (:deposit) { double :deposit }
     it 'adds to transaction_array' do
-      expect { @account.create_deposit(nil, deposit) }.to(
+      expect { @account.create_deposit(nil, nil, deposit) }.to(
         change { @account.transaction_array.length }.by(1)
       )
     end
