@@ -14,23 +14,36 @@ end
 
 private
 
-def create_hash(element, balance)
-  hash = {}
-  hash['date'] = element.date
-  if element.is_a?(Deposit)
-    hash['credit'] = element.amount
-    balance += element.amount
-    hash['balance'] = balance
-    hash['debit'] = nil
+def create_hash(transaction, balance)
+  if a_deposit?(transaction)
+    deposit_hash(transaction, add_balance(transaction, balance))
   else
-    hash['debit'] = element.amount
-    balance -= element.amount
-    hash['balance'] = balance
-    hash['credit'] = nil
+    withdrawal_hash(transaction, subtract_balance(transaction, balance))
   end
-  hash
 end
 
 def sort_by_date(array)
   sorted = array.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
+end
+
+def a_deposit?(transaction)
+  transaction.is_a?(Deposit)
+end
+
+def deposit_hash(deposit, balance)
+  { 'date' => deposit.date, 'credit' => deposit.amount,
+    'balance' => balance, 'debit' => nil }
+end
+
+def withdrawal_hash(withdrawal, balance)
+  { 'date' => withdrawal.date, 'credit' => nil,
+    'balance' => balance, 'debit' => withdrawal.amount }
+end
+
+def add_balance(transaction, balance)
+  balance + transaction.amount
+end
+
+def subtract_balance(transaction, balance)
+  balance - transaction.amount
 end
