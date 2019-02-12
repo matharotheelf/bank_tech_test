@@ -11,4 +11,8 @@ class Account
   def create_withdrawal(amount, withdrawal = Withdrawal.new(amount))
     @transaction_array.push(withdrawal)
   end
+
+  def create_deposit(amount, withdrawal = Deposit.new(amount))
+    @transaction_array.push(withdrawal)
+  end
 end
