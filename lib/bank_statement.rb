@@ -2,17 +2,17 @@ require_relative 'account.rb'
 
 class Bank_statement
   def create_history(account)
-    transactions = account.transaction_array
     final_array = []
     balance = 0
-    sorted = transactions.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
-    sorted.each do |element|
+    sort_by_date(account.transaction_array).each do |element|
       final_array.unshift(create_hash(element, balance))
       balance = create_hash(element, balance)['balance']
     end
     final_array
   end
 end
+
+private
 
 def create_hash(element, balance)
   hash = {}
@@ -29,4 +29,8 @@ def create_hash(element, balance)
     hash['credit'] = nil
   end
   hash
+end
+
+def sort_by_date(array)
+  sorted = array.sort_by { |s| Date.strptime(s.date, '%Y-%m-%d') }
 end
