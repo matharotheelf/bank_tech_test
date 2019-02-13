@@ -1,4 +1,4 @@
-# Game-of-Life
+#Bank Tech Test
 
 This is a repository for the Bank technical test. The aim is create a programme which can save withdrawals and deposits of money to a bank account and then print the details of that account's transactions.
 
@@ -24,7 +24,7 @@ As a user,
 
 To see my account history,
 
-I would like to be able to see my balance after each transaction
+I would like to be able to see my balance after each transaction.
 
 **User Story 4**
 
@@ -32,7 +32,7 @@ As a user,
 
 To see my account history,
 
-I would like to be able to see the value of each transaction
+I would like to be able to see the value of each transaction.
 
 **User Story 5**
 
@@ -40,7 +40,7 @@ As a user,
 
 To deposit money,
 
-I would like to be able to add a deposit to my account
+I would like to be able to add a deposit to my account.
 
 **User Story 6**
 
@@ -48,8 +48,21 @@ As a user,
 
 To withdraw money,
 
-I would like to be able to add a withdrawal to my account
+I would like to be able to add a withdrawal to my account.
 
+##Approach
+
+I split the code into to five classes:
+
+1. The Deposit class stores the information of one deposit transaction.
+
+2. The Withdrawal class stores the information of one withdrawal transaction.
+
+3. The Account class stores an array of all the Withdrawal and Deposit objects associated to an account i.e. the account history. The methods "create_deposit" and "create_withdrawal" create a Withdrawal and Deposit objects respectively and store them to the Account's array.
+
+4. The BankStatement class converts Account object's array into a hash in the format needed for the printed bank statement.
+
+5. The PrintStatement class convert's the BankStatment's hash into a string which it then prints to the console.
 
 ## Getting Started
 
@@ -79,7 +92,7 @@ To withdraw money from the account run on the "Account" object:
 
  And to print the statement to the console run:
 
-printer.print_statement(statement)
+ printer.print_statement(statement)
 
 ### Prerequisites
 
