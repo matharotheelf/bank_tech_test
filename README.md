@@ -64,6 +64,8 @@ I split the code into to five classes:
 
 5. The PrintStatement class convert's the BankStatment's hash into a string which it then prints to the console.
 
+6. The Float class adds a method to Float object that displays float with two decimal places.
+
 ## Getting Started
 
 To get started I will guide you in how to use the app in irb.
