@@ -1,0 +1,2 @@
+describe Float do
+end

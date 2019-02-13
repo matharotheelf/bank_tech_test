@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-12T15:55:22+00:00">2019-02-12T15:55:22+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-13T14:09:44+00:00">2019-02-13T14:09:44+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#dd9672b73d3bf70a304121560af83d37e2d6e103" class="src_link" title="lib/deposit.rb">lib/deposit.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#ce40a09b624c22de321952124e6659cd0481aba5" class="src_link" title="lib/print_statement.rb">lib/print_statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>29</td>
+        <td>30</td>
         <td>16</td>
         <td>16</td>
         <td>0</td>
@@ -93,7 +93,7 @@
       <tr>
         <td class="strong"><a href="#f913d0c56542eb114d0ba38aedbc48fed5112a8a" class="src_link" title="lib/withdrawal.rb">lib/withdrawal.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -346,7 +346,7 @@
       <tr>
         <td class="strong"><a href="#dd9672b73d3bf70a304121560af83d37e2d6e103" class="src_link" title="lib/deposit.rb">lib/deposit.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -356,7 +356,7 @@
       <tr>
         <td class="strong"><a href="#ce40a09b624c22de321952124e6659cd0481aba5" class="src_link" title="lib/print_statement.rb">lib/print_statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>29</td>
+        <td>30</td>
         <td>16</td>
         <td>16</td>
         <td>0</td>
@@ -366,7 +366,7 @@
       <tr>
         <td class="strong"><a href="#f913d0c56542eb114d0ba38aedbc48fed5112a8a" class="src_link" title="lib/withdrawal.rb">lib/withdrawal.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -556,7 +556,7 @@
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># BankStatement creates a hash for a statement from an account.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -700,7 +700,7 @@
         <li class="covered" data-hits="18" data-linenumber="26">
           <span class="hits">18</span>
           
-          <code class="ruby">  sorted = array.sort_by { |s| Date.strptime(s.date, &#39;%Y-%m-%d&#39;) }</code>
+          <code class="ruby">  array.sort_by { |s| Date.strptime(s.date, &#39;%Y-%m-%d&#39;) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -860,43 +860,49 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">class Deposit</code>
+          
+          <code class="ruby"># Deposit class stores the information of one deposit</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :amount, :date</code>
+          <code class="ruby">class Deposit</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(amount, date = Date.today)</code>
+          <code class="ruby">  attr_reader :amount, :date</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @amount = amount</code>
+          <code class="ruby">  def initialize(amount, date = Date.today)</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="5">
           <span class="hits">4</span>
           
+          <code class="ruby">    @amount = amount</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
+          
           <code class="ruby">    @date = date</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -933,163 +939,169 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="3">
           
-          <code class="ruby">class PrintStatement</code>
+          
+          <code class="ruby"># PrintStatement creates the printout of bankstatement given history hash</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  def print_statement(statement_array)</code>
+          <code class="ruby">class PrintStatement</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          <code class="ruby">    str = &quot;date || credit || debit || balance\n&quot;</code>
+          <code class="ruby">  def print_statement(statement_array)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
+          <code class="ruby">    str = &quot;date || credit || debit || balance\n&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
           <code class="ruby">    statement_array.each do |i|</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="7">
+        <li class="covered" data-hits="5" data-linenumber="8">
           <span class="hits">5</span>
           
           <code class="ruby">      str += &quot;#{i[&#39;date&#39;]} || #{credit(i)} || #{debit(i)} || #{i[&#39;balance&#39;]}\n&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
           <code class="ruby">    p str</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">  def credit(hash)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="15">
+        <li class="covered" data-hits="5" data-linenumber="16">
           <span class="hits">5</span>
           
           <code class="ruby">    if hash[&#39;credit&#39;].nil?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="17">
           <span class="hits">2</span>
           
           <code class="ruby">      &#39;&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
+        <li class="covered" data-hits="3" data-linenumber="19">
           <span class="hits">3</span>
           
           <code class="ruby">      hash[&#39;credit&#39;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  def debit(hash)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="23">
+        <li class="covered" data-hits="5" data-linenumber="24">
           <span class="hits">5</span>
           
           <code class="ruby">    if hash[&#39;debit&#39;].nil?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="24">
+        <li class="covered" data-hits="3" data-linenumber="25">
           <span class="hits">3</span>
           
           <code class="ruby">      &#39;&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
+        <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
           <code class="ruby">      hash[&#39;debit&#39;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>
@@ -1114,43 +1126,49 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">class Withdrawal</code>
+          
+          <code class="ruby"># Withdrawal class stores the information of one withdrawal</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :amount, :date</code>
+          <code class="ruby">class Withdrawal</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(amount, date = Date.today)</code>
+          <code class="ruby">  attr_reader :amount, :date</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @amount = amount</code>
+          <code class="ruby">  def initialize(amount, date = Date.today)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="5">
           <span class="hits">3</span>
           
+          <code class="ruby">    @amount = amount</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
+          
           <code class="ruby">    @date = date</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>

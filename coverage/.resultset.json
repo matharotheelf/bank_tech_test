@@ -25,6 +25,7 @@
         null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/deposit.rb": [
+        null,
         1,
         1,
         1,
@@ -34,6 +35,7 @@
         null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/withdrawal.rb": [
+        null,
         1,
         1,
         1,
@@ -96,6 +98,7 @@
       "/Users/admin/technical_challenge/bank_tech_test/lib/print_statement.rb": [
         1,
         null,
+        null,
         1,
         1,
         2,
@@ -125,6 +128,6 @@
         null
       ]
     },
-    "timestamp": 1549986922
+    "timestamp": 1550066984
   }
 }
