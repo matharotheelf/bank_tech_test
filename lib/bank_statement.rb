@@ -1,5 +1,4 @@
 require_relative 'account.rb'
-
 # BankStatement creates a hash for a statement from an account.
 class BankStatement
   def create_history(account)

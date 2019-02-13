@@ -1,35 +1,113 @@
-Makers Academy week 7 tech test - showcasing OO design and TDD skills.
+# Game-of-Life
 
-## Specification
-----------------
+This is a repository for the Bank technical test. The aim is create a programme which can save withdrawals and deposits of money to a bank account and then print the details of that account's transactions.
 
-### Requirements
-----------------
+**User Story 1**
 
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+As a user,
 
-### Acceptance criteria
------------------------
+To see my account history,
 
-**Given** a client makes a deposit of 1000 on 10-01-2012
-**And** a deposit of 2000 on 13-01-2012
-**And** a withdrawal of 500 on 14-01-2012
-**When** she prints her bank statement
-**Then** she would see
+I would like to be able to see a history of past transactions.
 
-```
-date || credit || debit || balance
-14/01/2012 || || 500.00 || 2500.00
-13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00
-```
+**User Story 2**
 
-## User Stories
----------------
+As a user,
 
-```
-As
-```
+To see my account history,
+
+I would like to be able to see the date of all my transactions.
+
+**User Story 3**
+
+As a user,
+
+To see my account history,
+
+I would like to be able to see my balance after each transaction
+
+**User Story 4**
+
+As a user,
+
+To see my account history,
+
+I would like to be able to see the value of each transaction
+
+**User Story 5**
+
+As a user,
+
+To deposit money,
+
+I would like to be able to add a deposit to my account
+
+**User Story 6**
+
+As a user,
+
+To withdraw money,
+
+I would like to be able to add a withdrawal to my account
+
+
+## Getting Started
+
+To get started I will guide you in how to use the app in irb.
+
+To start you must create a new "Account", "BankStatement", and "PrintStatement" object:
+
+account = Account.new
+banker = BankStatement.new
+printer = PrintStatement.new
+
+To withdraw money from the account run on the "Account" object:
+
+ account.create_withdrawal(500)
+
+ Where the above withdraws 500 pounds.
+
+ To deposit money into the account run on the "Account" object:
+
+ account.create_deposit(100)
+
+ Where the above deposits 100 pounds.
+
+ Then to create a bank statement run:
+
+ statement = banker.create_history(account)
+
+ And to print the statement to the console run:
+
+printer.print_statement(statement)
+
+### Prerequisites
+
+To run the software you must have installed Ruby version 2.5.1p57 and to run the tests RSpec version 3.8.0.
+
+### Installing
+
+If you have installed bundler (https://bundler.io) you can quickly install all the gems used in this project. To install the gems run "bundle install" in the command line.
+
+## Running the tests
+
+To run the tests run "rspec" in the command line. The tests cover all the features of the program. There are also two feature tests written which run through two scenarios one with a grid with no live cells and one with a grid seeded with live cells.
+
+## Built With
+
+* [Ruby version 2.5.1p57](http://www.dropwizard.io/1.0.2/docs/) - Language used
+* [RSpec version 3.8.0](http://rspec.info) - Testing framework
+
+## Authors
+
+* **Thomas Lawrence**
+
+Challenged created by Makers' Academy
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+Thanks to the Makers' Academy for creating this challenge
