@@ -97,6 +97,7 @@
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/print_statement.rb": [
         1,
+        1,
         null,
         null,
         1,
@@ -124,17 +125,21 @@
         null,
         2,
         null,
+        null,
+        null,
+        1,
+        5,
         null,
         null
       ],
       "/Users/admin/technical_challenge/bank_tech_test/lib/float.rb": [
         1,
         1,
-        1,
+        7,
         null,
         null
       ]
     },
-    "timestamp": 1550068715
+    "timestamp": 1550077497
   }
 }
