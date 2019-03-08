@@ -50,7 +50,7 @@ To withdraw money,
 
 I would like to be able to add a withdrawal to my account.
 
-##Approach
+## Approach
 
 I split the code into to five classes:
 
