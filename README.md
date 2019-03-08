@@ -1,4 +1,4 @@
-#Bank Tech Test
+# Bank Tech Test
 
 This is a repository for the Bank technical test. The aim is create a programme which can save withdrawals and deposits of money to a bank account and then print the details of that account's transactions.
 
